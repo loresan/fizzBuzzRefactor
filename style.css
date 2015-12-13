@@ -75,3 +75,6 @@ input{
   display: block;
   margin: 0 auto;
 }
+input[type="button"]{
+  cursor: pointer;
+}

@@ -1,16 +1,21 @@
 $(document).ready(function() {
+  var cleanUp = function () {
+    $(".main p").remove();
+  }
 
-   $("input:button").click(function(event){
+  $("input:button").click(function(event){
      playWithNumber();
 
-    });
+  });
 
-
+  
   
 
   function playWithNumber(){
+    cleanUp();
     var userValue = $("input:text").val();
-    if(isNaN(userValue) || userValue % 1 != 0) {
+    
+    if(isNaN(userValue) || userValue % 1 != 0 || userValue == "") {
       alert("enter a valid decimal number");
   	}
 
@@ -32,7 +37,7 @@ $(document).ready(function() {
     		 	
     		 	else{
             $(".main").append("<p>"+NumberCount+"</p>");
-           
+
           }
 
         };
@@ -40,6 +45,8 @@ $(document).ready(function() {
   	}
 
   }
+
+  
  
  
 });
